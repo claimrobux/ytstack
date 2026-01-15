@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Pre Monetized YouTube Channel | Monetized YouTube Channels For Sale</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script async src="https://cdn.promotekit.com/promotekit.js" data-promotekit="38053318-eb73-4482-8428-9e3a0fa33703"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+            document.querySelectorAll('a[href^="https://buy.stripe.com/"]').forEach(function (link) {
+                const oldBuyUrl = link.getAttribute("href");
+                const referralId = window.promotekit_referral;
+                if (!oldBuyUrl.includes("client_reference_id")) {
+                    const newBuyUrl = oldBuyUrl + "?client_reference_id=" + referralId;
+                    link.setAttribute("href", newBuyUrl);
+                }
+            });
+
+            document.querySelectorAll("[pricing-table-id]").forEach(function (element) {
+                element.setAttribute("client-reference-id", window.promotekit_referral);
+            });
+
+            document.querySelectorAll("[buy-button-id]").forEach(function (element) {
+                element.setAttribute("client-reference-id", window.promotekit_referral);
+            });
+        }, 1500);
+    });
+    </script>
+  </body>
+</html>
