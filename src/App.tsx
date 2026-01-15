@@ -158,8 +158,8 @@ function App() {
         // Redirect to Stripe after a short delay
         setTimeout(() => {
           const stripeUrl = selectedPlan === 'instant' 
-            ? 'https://buy.stripe.com/4gw022gIC2zAbny001'
-            : 'https://buy.stripe.com/4gwdSSakecaa1MY28a';
+            ? 'https://whop.com/checkout/plan_nQgh7pNORdKLq'
+            : 'https://whop.com/checkout/plan_hv1qmJPM0Rjau';
           window.location.href = stripeUrl;
         }, 1500);
       } else {
